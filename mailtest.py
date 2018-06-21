@@ -20,9 +20,9 @@ benutzer = 'mp.raspi@gmx.net'
 pwd = 'mp1998Raspi!'
 sender = 'mp.raspi@gmx.net'
 receiver = 'michael.pfenninger@voegele.com' # mehrer receiver müssen mit ', ' getrennt werden
-subject = 'Raspi-Datei WWarmwasser.png und Fussbodenheizung.png'
-preambletext = 'Graphikdateien vom Raspi02, die um 0:01 Uhr erstellt wurden, fuer den vorangegangenen Tag.'
-filepath_selected = "/media/usb/daten/*.png"
+subject = 'Mein Bild'
+preambletext = 'Eben aufgenommen!'
+filepath_selected = "/home/pi/Pictures/*.jpeg"
 
 
 msg = MIMEMultipart()
@@ -42,6 +42,10 @@ msg.attach(MIMEText(preambletext))
 ##        part['Content-Disposition'] = 'attachment; filename="%s"' % basename(file)
 ##        msg.attach(part)
 
+fp =  open("/home/pi/Pictures/Bild2018-06-21.jpeg", "rb")
+part = MIMEApplication(fp.read(), Name=basename("/home/pi/Pictures/Bild2018-06-21.jpeg"))
+part['Content-Disposition'] = 'attachment; filename="%s"' % basename("/home/pi/Pictures/Bild2018-06-21.jpeg")
+msg.attach(part)
 
 # Send the email via 1und1 SMTP server.
 try:
