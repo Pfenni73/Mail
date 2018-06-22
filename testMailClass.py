@@ -1,4 +1,4 @@
 from mailClient import MailClient
 
-mc = MailClient('mail.gmx.net', 587, 'mp.raspi@gmx.net', 'mp1998Raspi!', 'mp.raspi@gmx.net')
-mc.sendMail('michael.pfenninger@voegele.com', 'Mein Test erfolgreich', 'Dies ist der Body')
+mc = MailClient('mail.gmx.net', 587, 'user@gmx.net', 'pw', 'user@gmx.net')
+mc.sendMail('receiver@gmail.com', 'Mein Test erfolgreich', 'Dies ist der Body')
