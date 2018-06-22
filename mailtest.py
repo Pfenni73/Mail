@@ -14,12 +14,12 @@ from email.utils import COMMASPACE, formatdate
 
 
 #Mail parameter
-smtp_server = 'mail.gmx.net' # 1und1 SMTP Server
+smtp_server = 'mail.gmx.net' # gmx SMTP Server
 smtp_port = 587
-benutzer = 'mp.raspi@gmx.net'
-pwd = 'mp1998Raspi!'
-sender = 'mp.raspi@gmx.net'
-receiver = 'michael.pfenninger@voegele.com' # mehrer receiver müssen mit ', ' getrennt werden
+benutzer = 'user@gmx.net'
+pwd = 'password'
+sender = 'user@gmx.net'
+receiver = 'receiver@gmail.com' # mehrer receiver müssen mit ', ' getrennt werden
 subject = 'Mein Bild'
 preambletext = 'Eben aufgenommen!'
 filepath_selected = "/home/pi/Pictures/*.jpeg"
