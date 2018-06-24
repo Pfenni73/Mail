@@ -16,9 +16,9 @@ from email.utils import COMMASPACE, formatdate
 #Mail parameter
 smtp_server = 'mail.gmx.net' # 1und1 SMTP Server
 smtp_port = 587
-benutzer = 'mp.raspi@gmx.net'
-pwd = 'mp1998Raspi!'
-sender = 'mp.raspi@gmx.net'
+benutzer = 'sender@gmx.net'
+pwd = 'password'
+sender = 'sender@gmx.net'
 receiver = 'michael.pfenninger@voegele.com' # mehrer receiver müssen mit ', ' getrennt werden
 subject = 'Mein Bild'
 preambletext = 'Eben aufgenommen!'
@@ -32,6 +32,7 @@ msg['Date'] = datetime.datetime.now().strftime('%d.%m.%Y %H:%M:%S')
 msg['Subject'] = subject
 
 msg.attach(MIMEText(preambletext))
+print (msg)
 
 
 ##for file in glob.glob(filepath_selected):
